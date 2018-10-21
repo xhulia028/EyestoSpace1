@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"> 
+        <style>
+          
+            body {
+              margin: 20;
+              min-width: 250px;
+              font-family: "Lato", sans-serif;
+              color: white;
+            }
+            h1{
+                color:rgb(255, 255, 255);
+
+            }
+           
+
+           
+
+            
+            
+            /* Include the padding and border in an element's total width and height */
+            * {
+              box-sizing: border-box;
+              padding: 6;
+            }
+            
+            /* Remove margins and padding from the list */
+            
+            ul  {
+              margin: 0;
+              padding: 0;
+            }
+            
+            
+            /* Style the list items */
+            ul li {
+              cursor: pointer;
+              position: relative;
+              padding: 12px 8px 12px 40px;
+              list-style-type: none;
+              background: #eee;
+              font-size: 18px;
+              transition: 0.2s;
+              color: black;
+              /* make the list items unselectable */
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+            }
+            
+            /* Set all odd list items to a different color (zebra-stripes) */
+            ul li:nth-child(odd) {
+              background: #f9f9f9;
+            }
+            
+            /* Darker background-color on hover */
+            ul li:hover {
+              background: #ddd;
+            }
+            
+            /* When clicked on, add a background color and strike out text */
+            ul li.checked {
+              background: #888;
+              color: #fff;
+              text-decoration: line-through;
+            }
+            
+            /* Add a "checked" mark when clicked on */
+            ul li.checked::before {
+              content: '';
+              position: absolute;
+              border-color: #fff;
+              border-style: solid;
+              border-width: 0 2px 2px 0;
+              top: 10px;
+              left: 16px;
+              transform: rotate(45deg);
+              height: 15px;
+              width: 7px;
+            }
+            
+            
+            
+            /* Style the header */
+            .header {
+              background-color: #336;
+              
+              color: white;
+              text-align: center;
+              padding: 30px ;
+
+              height: 15%;
+             clear: both;
+            }
+            
+            /* Clear floats after the header */
+           
+            
+            
+            
+            
+            
+            </style>
+    </head>
+    <body>
+    
+            <h1>Super Typhoon Mangkhut 2018</h1>
+            <h3 class="p1">Start Date: September 13, 2018</h3>
+           
+        
+       
+        <h2 >
+        Super Typhoon Mangkhut 2018 event photo: 
+        </h2>
+        <img src=".\Images\typhoonmangkhut_viirs_2018257_lrg.jpg"  width="50%"  controls style="float: right " >
+        <br> 
+          <p style="font-size:17" style="float: left"  ;>
+                In the early hours of September 15, 2018, Super Typhoon Mangkhut (Ompong) blew into Cagayan Province near the northern tip of Luzon, one of the most populated of the Philippine islands. Local reports described wind speeds of 205 kilometers (130 miles) per hour. The storm stretched nearly 900 kilometers (600 miles) across, with an eye 50 kilometers (30 miles) wide. It is the strongest tropical cyclone in any ocean basin so far this year.
+          </p>
+         
+          <div id="myDIV" class="header">
+                <h2 style="margin:5px">Develop your own custom checklist for the Super Typhoon Mangkhut 2018 disaster:</h2>
+  
+        </div>
+        
+        <ul id="myUL">
+          <li>Item 1</li>
+          <li class="checked">Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+          <li>Item 6</li>
+        </ul>
+        
+        <script>
+        
+        
+        
+        
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+          if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+          }
+        }, false);
+        
+        // Create a new list item when clicking on the "Add" button
+        
+         var inputValue = document.getElementById("myInput").value; 
+          
+          function newElement() {
+        
+          
+        
+          
+        }
+        </script>
+
+
+    </body>
+</html>

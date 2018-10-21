@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+        
+
+        <style>
+          
+          
+            body {
+              margin: 20;
+              min-width: 250px;
+              font-family: "Lato", sans-serif;
+              color: white;
+            }
+            h1{
+                color:rgb(255, 255, 255);
+
+            }
+           
+
+           
+
+            
+            
+            /* Include the padding and border in an element's total width and height */
+            * {
+              box-sizing: border-box;
+              padding: 6;
+            }
+            
+            /* Remove margins and padding from the list */
+            
+            ul  {
+              margin: 0;
+              padding: 0;
+            }
+            
+            
+            /* Style the list items */
+            ul li {
+              cursor: pointer;
+              position: relative;
+              padding: 12px 8px 12px 40px;
+              list-style-type: none;
+              background: #eee;
+              font-size: 18px;
+              transition: 0.2s;
+              color: black;
+              /* make the list items unselectable */
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+            }
+            
+            /* Set all odd list items to a different color (zebra-stripes) */
+            ul li:nth-child(odd) {
+              background: #f9f9f9;
+            }
+            
+            /* Darker background-color on hover */
+            ul li:hover {
+              background: #ddd;
+            }
+            
+            /* When clicked on, add a background color and strike out text */
+            ul li.checked {
+              background: #888;
+              color: #fff;
+              text-decoration: line-through;
+            }
+            
+            /* Add a "checked" mark when clicked on */
+            ul li.checked::before {
+              content: '';
+              position: absolute;
+              border-color: #fff;
+              border-style: solid;
+              border-width: 0 2px 2px 0;
+              top: 10px;
+              left: 16px;
+              transform: rotate(45deg);
+              height: 15px;
+              width: 7px;
+            }
+            
+            
+            
+            /* Style the header */
+            .header {
+              background-color: #336;
+              
+              color: white;
+              text-align: center;
+              padding: 30px ;
+
+              height: 15%;
+             clear: both;
+            }
+            
+            /* Clear floats after the header */
+           
+            
+            
+            
+            
+            
+            </style>
+    </head>
+    
+    
+   
+    <body>
+    
+            <h1>Hurricane Michael 2018</h1>
+            <h3 class="p1">Start Date: October 9, 2018</h3>
+           
+        
+       
+        <h2 >
+            Hurricane Michael 2018 event video: 
+        </h2>
+        <video width="50%" controls style="float: right ">
+            <source src=".\Images\Hurricane Michael From Space on October 9.mp4" type="video/mp4">
+            
+          </video><br>
+          <p style="font-size:17" style="float: left"  ;>
+            At approximately 1:30 p.m. EDT on October 10, 2018, Hurricane Michael made landfall near Mexico Beach, Florida. Wind speeds were estimated to be 155 miles (250 kilometers) per hour, which would make the category 4 hurricane the strongest on record to hit the Florida Panhandle. The storm has already destroyed homes and knocked out electric power in the area. Forecasters expect Michael to bring heavy winds and rain to the southeastern United States for several days. NASA Earth Science is bringing all relevant observations and science expertise to bear on Hurricane Michael before, during, and after landfall to provide situational awareness to stakeholders and the public. The intent is to provide a more comprehensive awareness throughout the entire disaster life cycle.
+          </p>
+         
+          <div id="myDIV" class="header">
+                <h2 style="margin:5px">Develop your own custom checklist for the Hurricane Michael 2018 disaster:</h2>
+  
+        </div>
+        
+        <ul id="myUL">
+          <li>Item 1</li>
+          <li class="checked">Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+          <li>Item 6</li>
+        </ul>
+
+        <div class="map">My map will go here</div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+        <script>
+        function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+        
+        
+        
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+          if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+          }
+        }, false);
+        
+        // Create a new list item when clicking on the "Add" button
+        
+         var inputValue = document.getElementById("myInput").value; 
+          
+          function newElement() {
+        
+        }
+       
+        </script>
+
+
+    </body>
+   
+</html>
